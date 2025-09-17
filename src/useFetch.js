@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 // setting the api link
-export const API_URL = `https://www.omdbapi.com/?&apikey=${process.env.REACT_APP_API_KEY}`;
+export const API_URL = `https://www.omdbapi.com/?&apikey=eb02894f`;
 
 
 const useFetch = (apiParams) => {
@@ -31,7 +31,7 @@ const useFetch = (apiParams) => {
   // debouncing in react js
   useEffect(() => {
     let timeOut = setTimeout(() => {
-      getMovie(`${API_URL}&s=${apiParams}`);
+      getMovie(`${API_URL}${apiParams}`);
     }, 1000);
     console.log("set");
     return () => {
